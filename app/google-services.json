@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "181438022446",
+    "project_id": "prayertimes-f83e2",
+    "storage_bucket": "prayertimes-f83e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181438022446:android:555e902d6bf896841030bf",
+        "android_client_info": {
+          "package_name": "com.drmiaji.prayertimes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfgCRb_bT31h7EPRDqwc7CBU86a5pZH28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
