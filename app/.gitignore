@@ -1,4 +1,1 @@
 /build
-git add app/google-services.json
-git commit -m "Re-add google-services.json"
-git push
