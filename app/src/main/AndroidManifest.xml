@@ -53,10 +53,6 @@
             android:name=".ui.main.MainActivity"
             android:exported="true" />
 
-        <activity
-            android:name=".DoaActivity"
-            android:exported="false" />
-
         <receiver
             android:name=".service.PrayerAlarm"
             android:enabled="true"

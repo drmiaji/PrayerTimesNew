@@ -1,7 +1,6 @@
 package com.drmiaji.prayertimes.compose.page
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Scaffold
@@ -10,9 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.drmiaji.prayertimes.DoaActivity
 import com.drmiaji.prayertimes.compose.ui.components.ItemCalendar
-import com.drmiaji.prayertimes.compose.ui.components.ItemDoa
 import com.drmiaji.prayertimes.compose.ui.components.ItemMainDate
 import com.drmiaji.prayertimes.compose.ui.components.ItemProgressActivity
 import com.drmiaji.prayertimes.compose.ui.components.ItemSchedule
@@ -44,10 +41,6 @@ fun HomePage(
 
     val context = LocalContext.current
 
-    fun openDoaActivity() {
-        val intent = Intent(context, DoaActivity::class.java)
-        context.startActivity(intent)
-    }
 
     Scaffold(Modifier.padding(16.dp)) {
         LazyColumn(contentPadding = it) {
@@ -63,7 +56,6 @@ fun HomePage(
             }
             item { ItemProgressActivity(progressListTask, goToProgressActivity) }
             item { ItemCalendar(calendar, goToDetailCalendar) }
-            item { ItemDoa { openDoaActivity() } }
             item { ItemSchedule(timingSchedule.imsak, timingSchedule, onSetReminder) }
             item { ItemSchedule(timingSchedule.fajr, timingSchedule, onSetReminder) }
             item { ItemSchedule(timingSchedule.dhuhr, timingSchedule, onSetReminder) }
