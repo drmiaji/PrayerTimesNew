@@ -8,6 +8,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.drmiaji.prayertimes.repo.local.entity.CheckedTaskEntity
 import com.drmiaji.prayertimes.repo.local.entity.ProgressTaskEntity
 import com.drmiaji.prayertimes.repo.local.entity.ReminderEntity
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -23,6 +24,7 @@ abstract class AlifDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var instance: AlifDatabase? = null
+        @OptIn(DelicateCoroutinesApi::class)
         fun getInstance(context: Context): AlifDatabase =
             instance ?: synchronized(this) {
                 instance ?: Room.databaseBuilder(

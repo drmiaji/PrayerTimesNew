@@ -72,8 +72,4 @@ class PrayerRepository @Inject constructor(
         localDataSource.updateCheckedTask(task.toCheckedEntity())
         onFinish()
     }
-
-    override suspend fun getAyahQuran(noSurah: Int): Flow<States<List<Ayah>>> =
-        remoteDataSource.getAyahQuran(noSurah)
-
 }

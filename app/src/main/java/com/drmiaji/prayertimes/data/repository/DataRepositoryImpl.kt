@@ -1,6 +1,5 @@
 package com.drmiaji.prayertimes.data.repository
 
-import com.drmiaji.prayertimes.data.model.Ayah
 import com.drmiaji.prayertimes.data.model.PrayerReminder
 import com.drmiaji.prayertimes.data.model.ProgressTask
 import com.drmiaji.prayertimes.data.model.Schedule
@@ -20,6 +19,4 @@ interface DataRepositoryImpl {
     suspend fun deleteProgressTask(task: ProgressTask)
 
     suspend fun updateCheckedTask(task: ProgressTask, onFinish: () -> Unit)
-
-    suspend fun getAyahQuran(noSurah: Int): Flow<States<List<Ayah>>>
 }

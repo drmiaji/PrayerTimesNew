@@ -20,7 +20,6 @@ import com.drmiaji.prayertimes.compose.ui.foundation.text.TextBody
 import com.drmiaji.prayertimes.compose.ui.foundation.text.TextHeadingLarge
 import com.drmiaji.prayertimes.data.model.DateSchedule
 import com.drmiaji.prayertimes.ui.compass.CompassActivity
-import com.drmiaji.prayertimes.ui.quran.QuranActivity
 import com.drmiaji.prayertimes.utils.TimeUtils.fullDate
 
 @Composable
@@ -31,17 +30,9 @@ fun ItemMainDate(
     ConstraintLayout(
         modifier = Modifier.fillMaxWidth()
     ) {
-        val (iconQuran, title, iconQibla) = createRefs()
-        ActionButton(modifier = Modifier.constrainAs(iconQuran) {
-            start.linkTo(parent.start, margin = 8.dp)
-            bottom.linkTo(parent.bottom)
-            top.linkTo(parent.top)
-        }, icon = R.drawable.ic_quran) {
-            context.startActivity(Intent(context, QuranActivity::class.java))
-        }
+        val (title, iconQibla) = createRefs()
         Column(
             modifier = Modifier.constrainAs(title) {
-                start.linkTo(iconQuran.end)
                 end.linkTo(iconQibla.start)
                 width = Dimension.fillToConstraints
             }, horizontalAlignment = Alignment.CenterHorizontally

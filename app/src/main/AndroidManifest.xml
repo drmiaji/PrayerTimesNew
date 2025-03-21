@@ -21,18 +21,10 @@
         android:theme="@style/Theme.Alif"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.quran.SurahActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Alif" />
-        <activity
             android:name=".ui.compass.CompassActivity"
             android:exported="false"
             android:theme="@style/Theme.Alif.Compass" />
-        <activity
-            android:name=".ui.quran.QuranActivity"
-            android:exported="false"
-            android:label="@string/title_activity_quran"
-            android:theme="@style/Theme.Alif" />
+
         <activity
             android:name=".compose.page.ComposeActivity"
             android:exported="false"

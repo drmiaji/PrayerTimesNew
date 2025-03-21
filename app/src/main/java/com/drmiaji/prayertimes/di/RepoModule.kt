@@ -12,7 +12,6 @@ import com.drmiaji.prayertimes.repo.local.room.AlifDatabase
 import com.drmiaji.prayertimes.repo.local.room.ReminderDao
 import com.drmiaji.prayertimes.repo.remote.RemoteDataSource
 import com.drmiaji.prayertimes.repo.remote.network.PrayerService
-import com.drmiaji.prayertimes.repo.remote.network.QuranService
 import com.drmiaji.prayertimes.service.PrayerAlarm
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -36,19 +35,6 @@ object RepoModule {
             .addConverterFactory(GsonConverterFactory.create()).client(client).build()
         return retrofit.create(PrayerService::class.java)
     }
-
-    @Provides
-    fun provideQuranService(client: OkHttpClient): QuranService {
-        val retrofit = Retrofit.Builder().baseUrl("https://api.npoint.io/99c279bb173a6e28359c/")
-            .addConverterFactory(GsonConverterFactory.create()).client(client).build()
-        return retrofit.create(QuranService::class.java)
-    }
-
-    @Provides
-    fun provideRemoteDataSource(
-        service: PrayerService,
-        quranService: QuranService
-    ): RemoteDataSource = RemoteDataSource(service, quranService)
 
     @Provides
     fun provideAlifDatabase(@ApplicationContext appContext: Context): AlifDatabase =
