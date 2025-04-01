@@ -11,7 +11,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.drmiaji.prayertimes"
+        applicationId "com.drmiaji.prayertimes2"
         minSdk 26
         targetSdk 34
         versionCode 1
@@ -55,7 +55,7 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
-    namespace 'com.drmiaji.prayertimes'
+    namespace 'com.drmiaji.prayertimes2'
 }
 
 dependencies {
